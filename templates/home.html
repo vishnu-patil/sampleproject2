@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Passengers Prediction</title>
+</head>
+
+<body style="background-color: rgb(99, 177, 173);">
+    <center>
+        <h1> Titanic Prediction </h1>
+        <form method="get" action="/titanic">
+            <!-- Headings for the form -->
+            <div class="headingsContainer">
+                <h3 style="color:rgb(197, 70, 165);">Know Your Relative is Dead Or Alive</h3>
+            </div>
+            
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                <label for="Pclass" style="color:Tomato;">Pclass</label><br>
+                <input type="number" min="1" max="3" placeholder="Enter Pclass" style="width: 180px;" name="Pclass" required>
+                <br><br>
+                <label for="Gender" style="color:Tomato;">Gender</label><br>
+                <select placeholder="Enter Gender" name="Gender" style="width: 180px;" required>
+                  <option></option>
+                  <option value = "male">male</option>
+                  <option value = "female">female</option>
+                </select>
+                <br><br>
+                <label for="Age" style="color:Tomato;">Age</label><br>
+                <input type="number" min="0" placeholder="Enter Age" name="Age" required>
+                <br><br>
+                <label for="SibSp" style="color:Tomato;">SibSp</label><br>
+                <input type="number" min="0" max="2" placeholder="Enter SibSp" style="width: 180px;" name="SibSp" required>
+                <br><br>
+                <label for="Parch" style="color:Tomato;">Parch</label><br>
+                <input type="number" min="0" max="2" placeholder="Enter Parch" style="width: 180px;" name="Parch" required>
+                <br><br>
+                <label for="Fare" style="color:Tomato;">Fare</label><br>
+                <input type="number" min="0" max="70" placeholder="Enter Fare" style="width: 180px;" name="Fare" required>
+                <br><br>
+                <label for="Embarked" style="color:Tomato;">Embarked</label><br>
+                <select placeholder="Enter Embarked" name="Embarked" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "S">S</option>
+                    <option value = "C">C</option>
+                    <option value = "Q">Q</option>
+                </select>
+    
+                <br><br>
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+                <br><br>
+                <h3 style="color:black;">The Prediction is: <b> {{ prediction }}</b> </h3>
+            </div>
+        </form>
+    </center>
+
+</body>
+</html>
